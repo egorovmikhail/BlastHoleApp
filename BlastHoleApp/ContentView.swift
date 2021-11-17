@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var holeArray: [Position] = []
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        ScrollView([.horizontal, .vertical]) {
+            ZStack {
+                ForEach(holeArray, id: \.self) { hole in
+                    BlastHoleView(blastholeNumber: hole.num, top: hole.top, leading: hole.leading, bottom: hole.bottom, trailing: hole.trailing)
+                }
+            }
+            .onAppear{
+                holeArray = ModelHole().createHoleArray(row: 6, colum: 6)
+            }
+        }
     }
 }
 
