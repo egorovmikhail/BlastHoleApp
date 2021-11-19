@@ -1,5 +1,5 @@
 //
-//  BlastHoleView.swift
+//  HoleView.swift
 //  BlastHoleApp
 //
 //  Created by Михаил Егоров on 08.11.2021.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct BlastHoleView: View {
+struct HoleView: View {
     
     @State var isDragging = false
     @State var isRemoveView = false
     @State var backgroundColor: Color = .gray
     @State var position = CGSize.zero
     
-    var holeNumber: Int = 0
+    var number: Int
     var top: CGFloat
     var leading: CGFloat
     var bottom: CGFloat
@@ -24,7 +24,7 @@ struct BlastHoleView: View {
         DragGesture()
             .onChanged { value in
                 self.position = value.translation
-//                print(position)
+                print(position)
                 self.isDragging = true }
             .onEnded { value in
                 self.position = .zero
@@ -36,6 +36,7 @@ struct BlastHoleView: View {
         TapGesture()
             .onEnded({
                 changeColor()
+                print(number)
             })
     }
     
@@ -44,7 +45,7 @@ struct BlastHoleView: View {
             Circle()
                 .fill(backgroundColor)
                 .frame(width: 30.0, height: 30.0)
-            Text("\(holeNumber)" )
+            Text("\(number)")
         }
         .padding(EdgeInsets(top: top, leading: leading, bottom: bottom, trailing: trailing))
         .offset(x: position.width, y: position.height)
@@ -52,18 +53,12 @@ struct BlastHoleView: View {
         .gesture(tap)
     }
     
-    init(blastholeNumber: Int = 0, top: CGFloat = 50, leading: CGFloat = 50, bottom: CGFloat = 50, trailing: CGFloat = 50) {
-        self.holeNumber = blastholeNumber
+    init(holeNumber: Int = 0, top: CGFloat = 50, leading: CGFloat = 50, bottom: CGFloat = 50, trailing: CGFloat = 50) {
+        self.number = holeNumber
         self.top = top
         self.leading = leading
         self.bottom = bottom
         self.trailing = trailing
-    }
-    
-    
-    
-    mutating func holeNumber(num: Int) -> Void {
-        holeNumber = num
     }
     
     private func changeColor() {
@@ -71,9 +66,9 @@ struct BlastHoleView: View {
     }
 }
 
-struct BlastHoleView_Previews: PreviewProvider {
+struct HoleView_Previews: PreviewProvider {
     static var previews: some View {
-        BlastHoleView()
+        HoleView()
     }
 }
 

@@ -13,5 +13,7 @@ struct BlastHoleAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
 }

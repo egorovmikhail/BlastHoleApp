@@ -8,23 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var holeArray: [Position] = []
-    
     var body: some View {
-        
-        ScrollView([.horizontal, .vertical]) {
-            ZStack {
-                ForEach(holeArray, id: \.self) { hole in
-                    BlastHoleView(blastholeNumber: hole.num, top: hole.top, leading: hole.leading, bottom: hole.bottom, trailing: hole.trailing)
+        NavigationView {
+            
+            List {
+                Section(header: Text("Languages")
+                            .font(.system(size: 24))) {
+                    ForEach((2...50), id: \.self) {
+                        Text("\($0) is even")
+                    }
                 }
             }
-            .onAppear{
-                holeArray = ModelHole().createHoleArray(row: 6, colum: 6)
+            
+            .frame(minWidth: 200, maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: .status) {
+                    Button(action: {
+                        myToggleSidebar()
+                    }) {
+                        Image(systemName: "sidebar.left")
+                    }
+                }
             }
+            
+            BlockView()
+                .frame(minWidth: 200, maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+                .background(VStack {
+                    Divider()
+                    Spacer()
+                })
+                .toolbar {
+                    ToolbarItemGroup {
+                        Spacer()
+                        Button(action: {
+                            print("Button pressed")
+                        }) {
+                            Image(systemName: "bold.italic.underline")
+                        }
+                        
+                        Button(action: {
+                            print("Button pressed")
+                        }) {
+                            Image(systemName: "lock")
+                        }
+                    }
+                }
         }
+        EmptyView()
+            .frame(minWidth: 500, minHeight: 300)
     }
 }
+
+func myToggleSidebar() {
+    NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
