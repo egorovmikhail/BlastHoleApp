@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8144ED742748002E00C5B078 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8144ED732748002E00C5B078 /* BlockView.swift */; };
+		814F680C27494FFC0041F1EC /* StartProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F680B27494FFC0041F1EC /* StartProgress.swift */; };
 		814F9FF02739253200B609B9 /* BlastHoleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F9FEF2739253200B609B9 /* BlastHoleAppApp.swift */; };
 		814F9FF22739253200B609B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814F9FF12739253200B609B9 /* ContentView.swift */; };
 		814F9FF42739253300B609B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F9FF32739253300B609B9 /* Assets.xcassets */; };
-		814F9FF72739253300B609B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F9FF62739253300B609B9 /* Preview Assets.xcassets */; };
 		816EB0EB27394BFB0029D594 /* HoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816EB0EA27394BFB0029D594 /* HoleView.swift */; };
 		816EB0ED27394C620029D594 /* BlockTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816EB0EC27394C620029D594 /* BlockTemplate.swift */; };
+		818DC63B274A7FF1002EC29A /* ListObjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818DC63A274A7FF1002EC29A /* ListObjectsView.swift */; };
+		81B3F4F527484442007852D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814F9FF62739253300B609B9 /* Preview Assets.xcassets */; };
+		81B3F4F7274844EA007852D5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 81B3F4F6274844EA007852D5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8144ED732748002E00C5B078 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		814F680B27494FFC0041F1EC /* StartProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartProgress.swift; sourceTree = "<group>"; };
 		814F9FEC2739253200B609B9 /* BlastHoleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlastHoleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814F9FEF2739253200B609B9 /* BlastHoleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlastHoleAppApp.swift; sourceTree = "<group>"; };
 		814F9FF12739253200B609B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; };
@@ -26,6 +30,8 @@
 		814F9FF82739253300B609B9 /* BlastHoleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlastHoleApp.entitlements; sourceTree = "<group>"; };
 		816EB0EA27394BFB0029D594 /* HoleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleView.swift; sourceTree = "<group>"; };
 		816EB0EC27394C620029D594 /* BlockTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTemplate.swift; sourceTree = "<group>"; };
+		818DC63A274A7FF1002EC29A /* ListObjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListObjectsView.swift; sourceTree = "<group>"; };
+		81B3F4F6274844EA007852D5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,14 @@
 			children = (
 				814F9FEF2739253200B609B9 /* BlastHoleAppApp.swift */,
 				814F9FF12739253200B609B9 /* ContentView.swift */,
+				818DC63A274A7FF1002EC29A /* ListObjectsView.swift */,
 				8144ED732748002E00C5B078 /* BlockView.swift */,
 				816EB0EA27394BFB0029D594 /* HoleView.swift */,
 				816EB0EC27394C620029D594 /* BlockTemplate.swift */,
+				814F680B27494FFC0041F1EC /* StartProgress.swift */,
 				814F9FF32739253300B609B9 /* Assets.xcassets */,
 				814F9FF82739253300B609B9 /* BlastHoleApp.entitlements */,
+				81B3F4F6274844EA007852D5 /* README.md */,
 				814F9FF52739253300B609B9 /* Preview Content */,
 			);
 			path = BlastHoleApp;
@@ -136,7 +145,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814F9FF72739253300B609B9 /* Preview Assets.xcassets in Resources */,
+				81B3F4F7274844EA007852D5 /* README.md in Resources */,
+				81B3F4F527484442007852D5 /* Preview Assets.xcassets in Resources */,
 				814F9FF42739253300B609B9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +161,10 @@
 				814F9FF22739253200B609B9 /* ContentView.swift in Sources */,
 				8144ED742748002E00C5B078 /* BlockView.swift in Sources */,
 				816EB0EB27394BFB0029D594 /* HoleView.swift in Sources */,
+				814F680C27494FFC0041F1EC /* StartProgress.swift in Sources */,
 				814F9FF02739253200B609B9 /* BlastHoleAppApp.swift in Sources */,
 				816EB0ED27394C620029D594 /* BlockTemplate.swift in Sources */,
+				818DC63B274A7FF1002EC29A /* ListObjectsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

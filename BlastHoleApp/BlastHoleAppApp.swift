@@ -11,7 +11,7 @@ import SwiftUI
 struct BlastHoleAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(isStart: StartProgress())
         }
         .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
         .windowStyle(HiddenTitleBarWindowStyle())
